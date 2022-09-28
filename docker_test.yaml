@@ -1,0 +1,11 @@
+version: '3'
+services:
+ alpine:
+  build: .
+ # hostname: myhost
+  volumes:
+    - type: bind
+      source: ./input.csv
+      target: /tmp/input.csv
+  tty: true
+  stdin_open: true
